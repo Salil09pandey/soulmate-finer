@@ -1,18 +1,26 @@
-let btn = document.querySelector('button');
+let refreshbBtn = document.querySelector('button');
 
 let title = document.querySelector('.match');
 
 let heart = document.querySelector('.heart');
 
-const selectRandomProfile = function () {
-  let rank = [];
-  for (let i = 0; i < 2; i++) {
-    var randomNumber1 = Math.floor(Math.random() * 22);
-    rank.push(randomNumber1);
-    var male = document.querySelectorAll('img');
-    var imageSourse = 'images/boy (' + randomNumber1 + ').jpg';
-    male[i].setAttribute('src', imageSourse);
-  }
+const selectRandomProfile = async function () {
+  const rank = generateRandomNumber();
+  console.log(rank);
+  let profilePhotos = document.querySelectorAll('img');
+
+  profilePhotos.forEach(async (profile, i) => {
+    // profile.setAttribute(`src`, `/images/icon.svg`);
+    profile.setAttribute(`src`, `/images/icon.svg`);
+    await profile.setAttribute(`src`, `images/boy (${rank[i]}).jpg`);
+
+    title.innerHTML = 'Please wait....🤞';
+    heart.innerHTML = '⬜';
+  });
+
+  await profilePhotos[0].decode();
+  await profilePhotos[1].decode();
+
   if (rank[0] === rank[1]) {
     title.innerHTML = 'You Choose Yourself! 😎';
     heart.innerHTML = '🤍';
@@ -28,4 +36,12 @@ const selectRandomProfile = function () {
   }
 };
 
-btn.addEventListener('click', selectRandomProfile);
+const generateRandomNumber = function () {
+  let rank = [];
+  for (let i = 0; i < 2; i++) {
+    const randomNumber = Math.floor(Math.random() * 22);
+    rank.push(randomNumber);
+  }
+  return rank;
+};
+refreshbBtn.addEventListener('click', selectRandomProfile);
