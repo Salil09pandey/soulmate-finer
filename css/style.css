@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+
+  font-family: 'Grenze Gotisch', cursive;
+  font-size: 1.9rem;
+  color: white;
+  text-align: center;
+}
+
+.porfile {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.man,
+.woman {
+  max-width: 300px;
+  min-height: 300px;
+  margin: auto 30px;
+  object-fit: cover;
+  border-radius: 4px;
+  background-size: cover;
+  border: 3px double white;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+  transition: height 1s;
+}
+
+.img {
+  max-height: 300px;
+  max-width: 300px;
+}
+
+#title {
+  margin-top: -17px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.match {
+  word-spacing: 0.2rem;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  font-size: large;
+  background-color: #fff;
+  outline: none;
+  font-weight: 900;
+  border-radius: 0.5em;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1em;
+}
+a:active {
+  color: white;
+}
+a {
+  color: white;
+}
+footer {
+  font-family: 'Courier New', Courier, monospace;
+}
+@media only screen and (max-width: 600px) {
+  .porfile {
+    display: flex;
+    flex-direction: column;
+  }
+}
