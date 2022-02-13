@@ -1,6 +1,6 @@
 let refreshbBtn = document.querySelector('button');
 
-let title = document.querySelector('.match');
+let result = document.querySelector('.result');
 
 let heart = document.querySelector('.heart');
 
@@ -9,12 +9,13 @@ const selectRandomProfile = async function () {
   console.log(rank);
   let profilePhotos = document.querySelectorAll('img');
 
+  await profilePhotos[0].setAttribute(`src`, `/images/icon.svg`);
+  await profilePhotos[1].setAttribute(`src`, `/images/icon.svg`);
   profilePhotos.forEach(async (profile, i) => {
-    profile.setAttribute(`src`, `/images/icon.svg`);
-
+    // profile.setAttribute(`src`, `/images/icon.svg`);
     profile.setAttribute(`src`, `images/boy (${rank[i]}).jpg`);
-    title.innerHTML = 'Please wait...🤞';
 
+    result.innerHTML = 'Please wait...🤞';
     heart.innerHTML = '⬜';
   });
 
@@ -22,16 +23,16 @@ const selectRandomProfile = async function () {
   await profilePhotos[1].decode();
 
   if (rank[0] === rank[1]) {
-    title.innerHTML = 'You Choose Yourself! 😎';
+    result.innerHTML = 'You Choose Yourself! 😎';
     heart.innerHTML = '🤍';
   } else if (rank[0] > 10 && rank[1] > 10) {
-    title.innerHTML = "It's a Bestie match! 👩‍❤️‍💋‍👩";
+    result.innerHTML = "It's a Bestie match! 👩‍❤️‍💋‍👩";
     heart.innerHTML = '❤️';
   } else if (rank[0] < 11 && rank[1] < 11) {
-    title.innerHTML = 'Its a Friend match! 👨‍❤️‍👨';
+    result.innerHTML = 'Its a Friend match! 👨‍❤️‍👨';
     heart.innerHTML = '💙';
   } else {
-    title.innerHTML = 'Congrats..🎉 Its a gf/bf match! 👫';
+    result.innerHTML = 'Congrats..🎉 Its a gf/bf match! 👫';
     heart.innerHTML = '💕';
   }
 };

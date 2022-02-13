@@ -17,17 +17,16 @@ body {
   text-align: center;
 }
 
-.porfile {
+.profiles--container {
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.man,
-.woman {
+.profile {
   max-width: 300px;
-  min-height: 300px;
+  max-height: 300px;
   margin: auto 30px;
   object-fit: cover;
   border-radius: 4px;
@@ -36,16 +35,17 @@ body {
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
 }
 
-.img {
-  max-height: 300px;
-  max-width: 300px;
+.loader {
+  display: block;
+  z-index: 1;
+  background-image: url('/images/icon.svg');
 }
 
 #title {
   margin-top: -17px;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.match {
+.result {
   word-spacing: 0.2rem;
 }
 
