@@ -34,7 +34,6 @@ body {
   background-size: cover;
   border: 3px double white;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-  transition: height 1s;
 }
 
 .img {

@@ -10,11 +10,11 @@ const selectRandomProfile = async function () {
   let profilePhotos = document.querySelectorAll('img');
 
   profilePhotos.forEach(async (profile, i) => {
-    // profile.setAttribute(`src`, `/images/icon.svg`);
     profile.setAttribute(`src`, `/images/icon.svg`);
-    await profile.setAttribute(`src`, `images/boy (${rank[i]}).jpg`);
 
-    title.innerHTML = 'Please wait....🤞';
+    profile.setAttribute(`src`, `images/boy (${rank[i]}).jpg`);
+    title.innerHTML = 'Please wait...🤞';
+
     heart.innerHTML = '⬜';
   });
 
