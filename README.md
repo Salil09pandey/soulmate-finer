@@ -6,7 +6,7 @@
 
 
 
-#### Live Demo : [https://rahmanxyz.github.io/soulmateFinder/](https://rahmanxyz.github.io/soulmateFinder/)
+#### Live Demo : [https://soulmatefinder.netlify.app/](https://soulmatefinder.netlify.app/)
 
 
-![soulmatefinder](https://github.com/rahmanxyz/soulmateFinder/blob/main/soulmateFinderBanner.gif)
+![soulmatefinder](https://github.com/rahmanxyz/soulmate-finer/blob/main/soulmateFinderBanner.gif)
