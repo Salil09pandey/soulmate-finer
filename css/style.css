@@ -35,12 +35,6 @@ body {
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
 }
 
-.loader {
-  display: block;
-  z-index: 1;
-  background-image: url('/images/icon.svg');
-}
-
 #title {
   margin-top: -17px;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
