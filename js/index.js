@@ -20,7 +20,9 @@ const selectRandomProfile = async function () {
   });
 
   await profilePhotos[0].decode();
+  profilePhotos[0].classList.remove('loader');
   await profilePhotos[1].decode();
+  profilePhotos[1].classList.remove('loader');
 
   if (rank[0] === rank[1]) {
     result.innerHTML = 'You Choose Yourself! 😎';
