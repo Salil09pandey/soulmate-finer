@@ -13,14 +13,22 @@ const selectRandomProfile = async function () {
   await profilePhotos[1].setAttribute(`src`, `/images/icon.svg`);
   profilePhotos.forEach(async (profile, i) => {
     profile.setAttribute(`src`, `images/boy (${rank[i]}).jpg`);
+    profile.classList.remove('animate-this-element');
+    heart.classList.remove('animate-this-element');
+    result.classList.remove('animat-this-element');
 
     result.innerHTML = 'Please wait...🤞';
     heart.innerHTML = '⬜';
   });
 
   await profilePhotos[0].decode();
+  profilePhotos[0].classList.add('animate-this-element');
 
   await profilePhotos[1].decode();
+  profilePhotos[1].classList.add('animate-this-element');
+
+  heart.classList.add('animat-this-element');
+  result.classList.add('animat-this-element');
 
   if (rank[0] === rank[1]) {
     result.innerHTML = 'You Choose Yourself! 😎';

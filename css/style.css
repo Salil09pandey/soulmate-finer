@@ -12,7 +12,7 @@ body {
   background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
 
   font-family: 'Grenze Gotisch', cursive;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
 }
@@ -20,6 +20,7 @@ body {
 .profiles--container {
   margin: auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -62,8 +63,28 @@ a {
 footer {
   font-family: 'Courier New', Courier, monospace;
 }
+
+@keyframes name-of-animation {
+  0% {
+    filter: blur(6px);
+    opacity: 0;
+  }
+  25% {
+    filter: blur(4px);
+  }
+  50% {
+    filter: blur(2px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+.animate-this-element {
+  animation: name-of-animation ease-out 0.8s;
+}
 @media only screen and (max-width: 600px) {
-  .porfile {
+  .profiles--container {
     display: flex;
     flex-direction: column;
   }
