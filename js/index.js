@@ -7,7 +7,7 @@ let heart = document.querySelector('.heart');
 const selectRandomProfile = async function () {
   const rank = generateRandomNumber();
   console.log(rank);
-  let profilePhotos = document.querySelectorAll('img');
+  let profilePhotos = document.querySelectorAll('.img');
 
   await profilePhotos[0].setAttribute(`src`, `/images/icon.svg`);
   await profilePhotos[1].setAttribute(`src`, `/images/icon.svg`);
