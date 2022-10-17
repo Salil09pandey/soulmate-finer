@@ -31,7 +31,7 @@ const selectRandomProfile = async function () {
   result.classList.add('animat-this-element');
 
   if (rank[0] === rank[1]) {
-    result.innerHTML = 'You Choose Yourself! 😎';
+    result.innerHTML = 'You Choose Yourself! 😉';
     heart.innerHTML = '🤍';
   } else if (rank[0] > 10 && rank[1] > 10) {
     result.innerHTML = "It's a Bestie match! 👩‍❤️‍💋‍👩";
@@ -40,7 +40,7 @@ const selectRandomProfile = async function () {
     result.innerHTML = 'Its a Friend match! 👨‍❤️‍👨';
     heart.innerHTML = '💙';
   } else {
-    result.innerHTML = 'Congrats..🎉 Its a gf/bf match! 👫';
+    result.innerHTML = 'Congratulations..🎉 Its a gf/bf match! 👫';
     heart.innerHTML = '💕';
   }
 };
